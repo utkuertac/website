@@ -1,0 +1,23 @@
+/* General icon button styling */
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standard icon size */
+.icon-img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Emoji icon (language flag) size */
+.icon-emoji {
+    font-size: 20px;
+    line-height: 1;
+}
