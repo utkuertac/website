@@ -151,17 +151,6 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 footer a{color:var(--text2);text-decoration:none}
 footer a:hover{color:var(--accent)}
 
-/* EXPERIENCE */
-.exp-list{display:flex;flex-direction:column;gap:1rem}
-.exp-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius2);padding:1.25rem;transition:border-color .2s;}
-.exp-item:hover{border-color:var(--border2)}
-.exp-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;}
-.exp-company{font-size:.88rem;font-weight:700;color:var(--text)}
-.exp-company span{color:var(--accent)}
-.exp-date{font-size:.65rem;color:var(--text3);letter-spacing:.08em;border:1px solid var(--border);padding:.2rem .5rem;border-radius:var(--radius);}
-.exp-role{font-size:.72rem;color:var(--accent);letter-spacing:.1em;margin-bottom:.5rem}
-.exp-desc{font-size:.77rem;color:var(--text2);line-height:1.75}
-
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
 .fade-in.visible{opacity:1;transform:none}
@@ -254,10 +243,10 @@ footer a:hover{color:var(--accent)}
       <ul class="info-list">
         <li><span class="info-key">email</span><span class="info-val"><a href="mailto:utkuertac@gmail.com">utkuertac@gmail.com</a></span></li>
         <li><span class="info-key">role</span><span class="info-val">Junior Full-Stack Developer</span></li>
-        <li><span class="info-key">location</span><span class="info-val">Ankara, Türkiye</span></li>
         <li><span class="info-key">degree</span><span class="info-val">B.Sc. Computer Engineering</span></li>
         <li><span class="info-key">university</span><span class="info-val">OSTİM Technical University</span></li>
         <li><span class="info-key">graduation</span><span class="info-val">July 2025</span></li>
+        <li><span class="info-key">location</span><span class="info-val">Ankara, Türkiye</span></li>        
         <li><span class="info-key">languages</span><span class="info-val">Turkish [Native] · English [B2]</span></li>
       </ul>
     </div>
@@ -272,11 +261,11 @@ footer a:hover{color:var(--accent)}
   <div class="skills-grid">
     <div class="skill-card">
       <div class="skill-cat">front-end</div>
-      <div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">React</span></div>
+      <div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-cat">back-end</div>
-      <div class="skill-tags"><span class="skill-tag">C#</span><span class="skill-tag">ASP.NET Core</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">EF Core</span><span class="skill-tag">Identity Framework</span></div>
+      <div class="skill-tags"><span class="skill-tag">C#</span><span class="skill-tag">ASP.NET Core</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-cat">tools</div>
@@ -333,7 +322,7 @@ footer a:hover{color:var(--accent)}
       <button class="modal-close" onclick="closeModal('company')">✕</button>
     </div>
     <div class="modal-section"><div class="modal-label">// overview</div>
-      <div class="modal-body">A Company Information Tracking Web Application developed using ASP.NET Core. Built to manage complex multi-user and multi-company relationships with full role-based access control.</div>
+      <div class="modal-body">A Company Information Tracking Web Application was developed using ASP.NET Core. EF Core and SQL Server were used. User login and role management were added with Identity Framework. Multi user-company relationship management and an admin panel were implemented. A responsive interface was built using HTML, CSS, Bootstrap, and JavaScript. This project enabled tracking of 25+ companies and managing 10+ users, accelerating data tracking processes and improving data security and accessibility through server integration.</div>
     </div>
     <div class="modal-metrics">
       <div class="metric-box"><div class="metric-val">25+</div><div class="metric-key">COMPANIES TRACKED</div></div>
@@ -343,13 +332,22 @@ footer a:hover{color:var(--accent)}
       <div class="modal-body">
         · User login & role management (Identity Framework)<br>
         · Multi user-company relationship management<br>
-        · Admin panel for data oversight<br>
+        · Admin panel for centralized data oversight<br>
         · Responsive interface (HTML, CSS, Bootstrap, JS)<br>
-        · Server integration for improved data security
+        · Secure server integration for 25+ companies and 10+ users
       </div>
     </div>
-    <div class="modal-section"><div class="modal-label">// tech-stack</div>
-      <div class="modal-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">SQL Server</span><span class="proj-tech">Identity Framework</span><span class="proj-tech">HTML/CSS</span><span class="proj-tech">Bootstrap</span><span class="proj-tech">JavaScript</span></div>
+    <div class="modal-section">
+      <div class="modal-label">// tech-stack</div>
+      <div class="modal-tech-row">
+        <span class="proj-tech">ASP.NET Core</span>
+        <span class="proj-tech">EF Core</span>
+        <span class="proj-tech">SQL Server</span>
+        <span class="proj-tech">Identity Framework</span>
+        <span class="proj-tech">HTML/CSS</span>
+        <span class="proj-tech">Bootstrap</span>
+        <span class="proj-tech">JavaScript</span>
+      </div>
     </div>
     <a class="modal-link" href="https://github.com/utkuertac/company-info-tracker" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -366,24 +364,34 @@ footer a:hover{color:var(--accent)}
       <button class="modal-close" onclick="closeModal('food')">✕</button>
     </div>
     <div class="modal-section"><div class="modal-label">// overview</div>
-      <div class="modal-body">A Food Recipe and Recommendation Website with full bilingual (TR/EN) support, external API integration, and a rich user experience including recipe sharing, favorites, and category search.</div>
+      <div class="modal-body">A Food Recipe and Recommendation Website was developed using ASP.NET Core. A TR/EN multilingual structure was implemented. EF Core and SQL Server were used, and authentication was handled with Identity Framework. Integration with TheMealDB and Google Translate API was implemented, providing access to 250+ recipes. Features include recipe sharing, favorites, category search, and an admin panel. A responsive interface was developed using HTML, CSS, Bootstrap, and JavaScript. User experience was improved, reducing access time to recipes and increasing usage efficiency.</div>
     </div>
     <div class="modal-metrics">
       <div class="metric-box"><div class="metric-val">250+</div><div class="metric-key">RECIPES AVAILABLE</div></div>
       <div class="metric-box"><div class="metric-val">TR/EN</div><div class="metric-key">MULTILINGUAL</div></div>
     </div>
     <div class="modal-section"><div class="modal-label">// key-features</div>
-      <div class="modal-body">
-        · TR/EN multilingual structure<br>
-        · TheMealDB API + Google Translate integration<br>
-        · Recipe sharing, favorites, category search<br>
-        · Admin panel for content management<br>
-        · Identity Framework authentication<br>
-        · Responsive Bootstrap interface
-      </div>
+    <div class="modal-body">
+      · TR/EN multilingual structure<br>
+      · TheMealDB API + Google Translate integration for 250+ recipes<br>
+      · Recipe sharing, favorites, and category search<br>
+      · Admin panel for content management<br>
+      · Identity Framework authentication<br>
+      · Responsive interface (HTML, CSS, Bootstrap, JS)
     </div>
-    <div class="modal-section"><div class="modal-label">// tech-stack</div>
-      <div class="modal-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">SQL Server</span><span class="proj-tech">Identity Framework</span><span class="proj-tech">TheMealDB API</span><span class="proj-tech">Google Translate API</span><span class="proj-tech">Bootstrap</span><span class="proj-tech">JavaScript</span></div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-label">// tech-stack</div>
+      <div class="modal-tech-row">
+        <span class="proj-tech">ASP.NET Core</span>
+        <span class="proj-tech">Identity Framework</span>
+        <span class="proj-tech">EF Core</span>
+        <span class="proj-tech">SQL Server</span>
+        <span class="proj-tech">JavaScript</span>
+        <span class="proj-tech">TheMealDB API</span>
+        <span class="proj-tech">Google Translate API</span>
+        <span class="proj-tech">Bootstrap</span>
+      </div>
     </div>
     <a class="modal-link" href="https://github.com/utkuertac/food-recipe-website" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -435,7 +443,7 @@ document.getElementById('heroContactBtn').addEventListener('click',()=>openModal
 function sendContact(){
   const msg=document.getElementById('cf-msg').value.trim();
   const status=document.getElementById('form-status');
-  window.location.href=`mailto:utkuertac@gmail.com?subject=utkuertac.com Contact Form&body=${encodeURIComponent(msg)}`;
+  window.location.href=`mailto:utkuertac@gmail.com?subject=Website Contact Form&body=${encodeURIComponent(msg)}`;
   status.textContent='// Opening your mail client...';
   status.className='form-status ok';
   setTimeout(()=>{closeModal('contact');status.className='form-status';},2500);
