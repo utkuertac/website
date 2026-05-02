@@ -18,25 +18,16 @@
   --mono:'Share Tech Mono',monospace;
   --radius:6px;--radius2:12px;--nav-h:64px;
 }
-[data-theme="light"]{
-  --bg:#f0f4f2;--bg2:#e8ede9;--bg3:#dde5df;
-  --surface:#ffffff;--surface2:#f5f8f6;
-  --border:#b8d4c4;--border2:#8db8a0;
-  --accent:#007a40;--accent2:#005f30;--accent3:#009955;
-  --text:#0a1a10;--text2:#3a5a48;--text3:#6a8a78;
-  --red:#cc2222;--blue:#2255cc;--yellow:#887700;
-}
+
 html{scroll-behavior:smooth;font-size:15px}
 body{background:var(--bg);color:var(--text);font-family:var(--mono);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--bg2)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,.015) 2px,rgba(0,255,136,.015) 4px);pointer-events:none;z-index:9999;}
-[data-theme="light"] body::before{display:none}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(10,12,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;z-index:100;transition:background .3s,border-color .3s;}
-[data-theme="light"] nav{background:rgba(240,244,242,.92)}
 .nav-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
 .nav-logo{width:32px;height:32px;border-radius:var(--radius);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .nav-logo img{width:100%;height:100%;object-fit:cover}
@@ -55,9 +46,7 @@ main{padding-top:var(--nav-h)}
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:2rem;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px, transparent 1px),linear-gradient(90deg, var(--border) 1px, transparent 1px);background-size:48px 48px;opacity:.35;}
-[data-theme="light"] .hero-grid{opacity:.5}
 .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(0,255,136,.12) 0%, transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
-[data-theme="light"] .hero-glow{background:radial-gradient(circle, rgba(0,122,64,.1) 0%, transparent 70%)}
 .hero-inner{position:relative;z-index:1;max-width:860px;width:100%;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
 .hero-left{}
 .hero-photo-wrap{flex-shrink:0}
@@ -67,7 +56,7 @@ main{padding-top:var(--nav-h)}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 .hero-title{font-family:var(--mono);font-size:clamp(2rem, 5vw, 3.6rem);font-weight:700;line-height:1.1;margin-bottom:1rem;}
-.hero-title .line1{display:block;color:var(--text)}
+.hero-title .line1{display:block;color:var(--text);font-size:0.6em;margin-bottom:0.3em;}
 .hero-title .name{display:block;color:var(--accent)}
 .cursor-blink{display:inline-block;width:3px;height:.85em;background:var(--accent);margin-left:4px;vertical-align:middle;animation:blink .8s step-end infinite;}
 .hero-sub{font-size:.82rem;color:var(--text2);max-width:520px;line-height:1.85;margin-bottom:2rem;}
@@ -85,7 +74,7 @@ main{padding-top:var(--nav-h)}
 
 /* SECTIONS */
 .section-wrap{padding:5rem 2rem;max-width:1000px;margin:0 auto}
-.sec-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;color:var(--accent);letter-spacing:.2em;margin-bottom:.75rem;}
+.sec-label{display:inline-flex;align-items:center;gap:.5rem;font-size:1.2rem;color:var(--accent);letter-spacing:.2em;margin-bottom:.75rem;}
 .sec-label::before{content:'//';color:var(--text3)}
 .sec-title{font-family:var(--mono);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;color:var(--text);margin-bottom:2.5rem;border-bottom:1px solid var(--border);padding-bottom:1rem;}
 
@@ -106,7 +95,7 @@ main{padding-top:var(--nav-h)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .skill-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius2);padding:1.25rem;transition:border-color .2s;}
 .skill-card:hover{border-color:var(--border2)}
-.skill-cat{font-size:.63rem;color:var(--accent);letter-spacing:.2em;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
+.skill-cat{font-size:1.05rem;color:var(--accent);letter-spacing:.2em;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
 .skill-cat::before{content:'>';color:var(--text3)}
 .skill-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .skill-tag{padding:.2rem .6rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.66rem;color:var(--text);letter-spacing:.04em;}
@@ -118,7 +107,7 @@ main{padding-top:var(--nav-h)}
 .proj-card:hover{border-color:var(--border2);transform:translateY(-3px)}
 .proj-card:hover::before{transform:scaleX(1)}
 .proj-num{font-size:.63rem;color:var(--text3);letter-spacing:.15em;margin-bottom:.75rem;}
-.proj-name{font-family:var(--mono);font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
+.proj-name{font-family:var(--mono);font-weight:700;color:var(--text);font-size:1.05rem;margin-bottom:.5rem;}
 .proj-name span{color:var(--accent)}
 .proj-desc{font-size:.76rem;color:var(--text2);line-height:1.75;margin-bottom:1rem}
 .proj-tech-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
@@ -137,7 +126,7 @@ main{padding-top:var(--nav-h)}
 .modal-close{background:none;border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:var(--radius);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;font-family:var(--mono);}
 .modal-close:hover{border-color:var(--red);color:var(--red)}
 .modal-section{margin-bottom:1.25rem}
-.modal-label{font-size:.63rem;color:var(--accent);letter-spacing:.18em;margin-bottom:.5rem}
+.modal-label{font-size:1.1rem;color:var(--accent);letter-spacing:.18em;margin-bottom:.5rem}
 .modal-body{font-size:.8rem;color:var(--text2);line-height:1.85}
 .modal-tech-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}
 .modal-link{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border:1px solid var(--accent);border-radius:var(--radius);color:var(--accent);font-size:.73rem;text-decoration:none;margin-top:1rem;transition:all .2s;font-family:var(--mono);}
@@ -221,12 +210,6 @@ footer a:hover{color:var(--accent)}
     <a class="nav-icon" href="https://www.x.com/utkuertac" target="_blank" rel="noopener" title="X">
       <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
-
-    <div class="nav-divider"></div>
-    <!-- Theme -->
-    <button class="nav-icon" id="themeBtn" title="Toggle theme" style="font-size:15px">☾</button>
-    <!-- Lang -->
-    <button class="nav-icon" id="langBtn" title="Dil / Language" style="font-size:11px;letter-spacing:.04em;font-family:var(--mono);width:auto;padding:0 .6rem;font-weight:700">EN</button>
   </div>
 </nav>
 
@@ -238,45 +221,44 @@ footer a:hover{color:var(--accent)}
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-badge" data-i18n="badge">AVAILABLE FOR HIRE</div>
       <h1 class="hero-title">
-        <span class="line1" data-i18n="hero-line1">Hi! I'm</span>
+        <span class="line1">Hi! I'm</span>
         <span class="name" id="typedName"><span class="cursor-blink"></span></span>
       </h1>
-      <p class="hero-sub" data-i18n="hero-sub">Junior Full-Stack Developer based in Ankara, Turkey. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.</p>
+      <p class="hero-sub">Junior Full-Stack Developer based in Ankara, Turkey. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.</p>
       <div class="hero-btns">
-        <button class="btn-primary" id="heroContactBtn" data-i18n="btn-contact">// contact-me</button>
-        <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" data-i18n="btn-about">[ about-me ]</button>
-        <button class="btn-outline" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})" data-i18n="btn-stack">[ skills ]</button>
-        <button class="btn-outline" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" data-i18n="btn-projects">[ projects ]</button>
+        <button class="btn-primary" id="heroContactBtn">// contact-me</button>
+        <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">[ about-me ]</button>
+        <button class="btn-outline" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">[ skills ]</button>
+        <button class="btn-outline" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">[ projects ]</button>
       </div>
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-photo"><img src="/img/favicon.png" alt="Utku Ertaç"/></div>
     </div>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span data-i18n="scroll">SCROLL</span></div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>SCROLL</span></div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
 <div class="section-wrap fade-in">
-  <div class="sec-label" data-i18n="sec-about">about-me</div>
+  <div class="sec-label">about-me</div>
   <div class="about-grid">
     <div class="about-text">
-      <p data-i18n="about-p1">I'm a <strong>Computer Engineering graduate</strong> (OSTİM Technical University, July 2025), passionate about building software that works — and works well.</p>
-      <p data-i18n="about-p2">My focus is <strong>Full-Stack development</strong>, combining clean React frontends with robust ASP.NET Core backends. I care deeply about code quality, Git workflows, and staying current with industry trends.</p>
-      <p data-i18n="about-p3">I believe in <strong>meaningful contributions</strong> — not just writing code, but solving real problems for real users through collaborative, innovative projects.</p>
+      <p>I'm a <strong>Computer Engineering graduate</strong> (OSTİM Technical University, July 2025), passionate about building software that works — and works well.</p>
+      <p>My focus is <strong>Full-Stack development</strong>, combining clean React frontends with robust ASP.NET Core backends. I care deeply about code quality, Git workflows, and staying current with industry trends.</p>
+      <p>I believe in <strong>meaningful contributions</strong> — not just writing code, but solving real problems for real users through collaborative, innovative projects.</p>
     </div>
     <div>
       <ul class="info-list">
-        <li><span class="info-key" data-i18n="info-loc">location</span><span class="info-val">Ankara, T</span></li>
-        <li><span class="info-key" data-i18n="info-deg">degree</span><span class="info-val" data-i18n="info-deg-val">B.Sc. Computer Engineering</span></li>
-        <li><span class="info-key" data-i18n="info-uni">university</span><span class="info-val">OSTİM Technical University</span></li>
-        <li><span class="info-key" data-i18n="info-grad">graduation</span><span class="info-val">July 2025</span></li>
-        <li><span class="info-key" data-i18n="info-role">role</span><span class="info-val" data-i18n="info-role-val">Junior Full-Stack Developer</span></li>
-        <li><span class="info-key" data-i18n="info-email">email</span><span class="info-val"><a href="mailto:utkuertac@gmail.com">utkuertac@gmail.com</a></span></li>
-        <li><span class="info-key" data-i18n="info-lang">languages</span><span class="info-val" data-i18n="info-lang-val">Turkish (Native) · English (B2)</span></li>
+        <li><span class="info-key">email</span><span class="info-val"><a href="mailto:utkuertac@gmail.com">utkuertac@gmail.com</a></span></li>
+        <li><span class="info-key">role</span><span class="info-val">Junior Full-Stack Developer</span></li>
+        <li><span class="info-key">location</span><span class="info-val">Ankara, Türkiye</span></li>
+        <li><span class="info-key">degree</span><span class="info-val">B.Sc. Computer Engineering</span></li>
+        <li><span class="info-key">university</span><span class="info-val">OSTİM Technical University</span></li>
+        <li><span class="info-key">graduation</span><span class="info-val">July 2025</span></li>
+        <li><span class="info-key">languages</span><span class="info-val">Turkish [Native] · English [B2]</span></li>
       </ul>
     </div>
   </div>
@@ -286,23 +268,23 @@ footer a:hover{color:var(--accent)}
 <!-- SKILLS -->
 <section id="skills">
 <div class="section-wrap fade-in">
-  <div class="sec-label" data-i18n="sec-skills">skills</div>
+  <div class="sec-label">skills</div>
   <div class="skills-grid">
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-fe">front-end</div>
+      <div class="skill-cat">front-end</div>
       <div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">React</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-be">back-end</div>
+      <div class="skill-cat">back-end</div>
       <div class="skill-tags"><span class="skill-tag">C#</span><span class="skill-tag">ASP.NET Core</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">EF Core</span><span class="skill-tag">Identity Framework</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-tools">tools</div>
+      <div class="skill-cat">tools</div>
       <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">SQL Server</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-lang">languages</div>
-      <div class="skill-tags"><span class="skill-tag" data-i18n="sk-turkish">Turkish — Native</span><span class="skill-tag" data-i18n="sk-english">English — B2</span></div>
+      <div class="skill-cat">languages</div>
+      <div class="skill-tags"><span class="skill-tag">Turkish [Native]</span><span class="skill-tag">English [B2]</span></div>
     </div>
   </div>
 </div>
@@ -311,27 +293,27 @@ footer a:hover{color:var(--accent)}
 <!-- PROJECTS -->
 <section id="projects">
 <div class="section-wrap fade-in">
-  <div class="sec-label" data-i18n="sec-proj">projects</div>
+  <div class="sec-label">projects</div>
   <div class="projects-grid">
     <div class="proj-card" onclick="openProject('company')">
       <div class="proj-name"><span>$</span> company-info-tracker</div>
-      <div class="proj-desc" data-i18n="proj1-desc">A Company Information Tracking Web Application with role management, admin panel, and multi user-company relationship system.</div>
+      <div class="proj-desc">A Company Information Tracking Web Application with role management, admin panel, and multi user-company relationship system.</div>
       <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">SQL Server</span><span class="proj-tech">Identity</span><span class="proj-tech">Bootstrap</span></div>
       <div class="proj-link">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         github.com/utkuertac/company-info-tracker
       </div>
-      <span class="proj-more" data-i18n="proj-more">[ >> click for details ]</span>
+      <span class="proj-more">[ >> click for details ]</span>
     </div>
     <div class="proj-card" onclick="openProject('food')">
       <div class="proj-name"><span>$</span> food-recipe-website</div>
-      <div class="proj-desc" data-i18n="proj2-desc">A Food Recipe and Recommendation Website with TR/EN multilingual support, TheMealDB and Google Translate API integration, and 250+ recipes.</div>
+      <div class="proj-desc">A Food Recipe and Recommendation Website with TR/EN multilingual support, TheMealDB and Google Translate API integration, and 250+ recipes.</div>
       <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">TheMealDB API</span><span class="proj-tech">Google Translate</span><span class="proj-tech">Identity</span></div>
       <div class="proj-link">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         github.com/utkuertac/food-recipe-website
       </div>
-      <span class="proj-more" data-i18n="proj-more">[ >> click for details ]</span>
+      <span class="proj-more">[ >> click for details ]</span>
     </div>
   </div>
 </div>
@@ -351,15 +333,15 @@ footer a:hover{color:var(--accent)}
       <button class="modal-close" onclick="closeModal('company')">✕</button>
     </div>
     <div class="modal-section"><div class="modal-label">// overview</div>
-      <div class="modal-body" data-i18n="m1-overview">A Company Information Tracking Web Application developed using ASP.NET Core. Built to manage complex multi-user and multi-company relationships with full role-based access control.</div>
+      <div class="modal-body">A Company Information Tracking Web Application developed using ASP.NET Core. Built to manage complex multi-user and multi-company relationships with full role-based access control.</div>
     </div>
     <div class="modal-metrics">
-      <div class="metric-box"><div class="metric-val">25+</div><div class="metric-key" data-i18n="m1-met1">COMPANIES TRACKED</div></div>
-      <div class="metric-box"><div class="metric-val">10+</div><div class="metric-key" data-i18n="m1-met2">USERS MANAGED</div></div>
+      <div class="metric-box"><div class="metric-val">25+</div><div class="metric-key">COMPANIES TRACKED</div></div>
+      <div class="metric-box"><div class="metric-val">10+</div><div class="metric-key">USERS MANAGED</div></div>
     </div>
     <div class="modal-section"><div class="modal-label">// key-features</div>
-      <div class="modal-body" data-i18n="m1-feat">
-        · User login &amp; role management (Identity Framework)<br>
+      <div class="modal-body">
+        · User login & role management (Identity Framework)<br>
         · Multi user-company relationship management<br>
         · Admin panel for data oversight<br>
         · Responsive interface (HTML, CSS, Bootstrap, JS)<br>
@@ -371,7 +353,7 @@ footer a:hover{color:var(--accent)}
     </div>
     <a class="modal-link" href="https://github.com/utkuertac/company-info-tracker" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      <span data-i18n="view-gh">>> GitHub</span>
+      <span>>> GitHub</span>
     </a>
   </div>
 </div>
@@ -384,14 +366,14 @@ footer a:hover{color:var(--accent)}
       <button class="modal-close" onclick="closeModal('food')">✕</button>
     </div>
     <div class="modal-section"><div class="modal-label">// overview</div>
-      <div class="modal-body" data-i18n="m2-overview">A Food Recipe and Recommendation Website with full bilingual (TR/EN) support, external API integration, and a rich user experience including recipe sharing, favorites, and category search.</div>
+      <div class="modal-body">A Food Recipe and Recommendation Website with full bilingual (TR/EN) support, external API integration, and a rich user experience including recipe sharing, favorites, and category search.</div>
     </div>
     <div class="modal-metrics">
-      <div class="metric-box"><div class="metric-val">250+</div><div class="metric-key" data-i18n="m2-met1">RECIPES AVAILABLE</div></div>
-      <div class="metric-box"><div class="metric-val">TR/EN</div><div class="metric-key" data-i18n="m2-met2">MULTILINGUAL</div></div>
+      <div class="metric-box"><div class="metric-val">250+</div><div class="metric-key">RECIPES AVAILABLE</div></div>
+      <div class="metric-box"><div class="metric-val">TR/EN</div><div class="metric-key">MULTILINGUAL</div></div>
     </div>
     <div class="modal-section"><div class="modal-label">// key-features</div>
-      <div class="modal-body" data-i18n="m2-feat">
+      <div class="modal-body">
         · TR/EN multilingual structure<br>
         · TheMealDB API + Google Translate integration<br>
         · Recipe sharing, favorites, category search<br>
@@ -405,7 +387,7 @@ footer a:hover{color:var(--accent)}
     </div>
     <a class="modal-link" href="https://github.com/utkuertac/food-recipe-website" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      <span data-i18n="view-gh">>> GitHub</span>
+      <span>>> GitHub</span>
     </a>
   </div>
 </div>
@@ -414,112 +396,19 @@ footer a:hover{color:var(--accent)}
 <div class="modal-backdrop" id="modal-contact">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-title"><span>//</span> <span data-i18n="contact-title">contact-me</span></div>
+      <div class="modal-title"><span>//</span> contact-me</div>
       <button class="modal-close" onclick="closeModal('contact')">✕</button>
     </div>
     <div class="form-group">
-      <label class="form-label" data-i18n="cf-msg-lbl">message</label>
+      <label class="form-label">message</label>
       <textarea class="form-textarea" id="cf-msg" placeholder="text"></textarea>
     </div>
-    <button class="btn-primary" onclick="sendContact()" style="width:100%" data-i18n="cf-send">[ send-message ]</button>
+    <button class="btn-primary" onclick="sendContact()" style="width:100%">[ send-message ]</button>
     <div class="form-status" id="form-status"></div>
   </div>
 </div>
 
 <script>
-// ── I18N ──
-const i18n={
-  en:{
-    badge:'AVAILABLE FOR HIRE','hero-line1':"Hi! I'm",
-    'hero-sub':'Junior Full-Stack Developer based in Ankara, Turkey. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.',
-    'btn-contact':'// CONTACT ME','btn-about':'[ WHO AM I ]','btn-stack':'[ TECH STACK ]','btn-projects':'[ PROJECTS ]',
-    scroll:'SCROLL',
-    'sec-about':'ABOUT_ME','about-title':'Who am I?',
-    'about-p1':'I\'m a <strong>Computer Engineering graduate</strong> (OSTİM Technical University, July 2025), passionate about building software that works — and works well.',
-    'about-p2':'My focus is <strong>Full-Stack development</strong>, combining clean React frontends with robust ASP.NET Core backends. I care deeply about code quality, Git workflows, and staying current with industry trends.',
-    'about-p3':'I believe in <strong>meaningful contributions</strong> — not just writing code, but solving real problems for real users through collaborative, innovative projects.',
-    'info-loc':'LOCATION','info-deg':'DEGREE','info-deg-val':'B.Sc. Computer Engineering',
-    'info-uni':'UNIVERSITY','info-grad':'GRAD','info-gpa':'GPA','info-role':'ROLE','info-role-val':'Junior Full-Stack Developer',
-    'info-lang':'LANG','info-lang-val':'Turkish (Native) · English (B2)',
-    'sec-exp':'EXPERIENCE','exp-title':'Work Experience','exp-intern':'INTERN ENGINEER',
-    'exp-netaflow':'Developed a web application for internal information management using ASP.NET Core and C#. Created data models using SQL Server and Entity Framework Core, and implemented user/role management.',
-    'exp-ion':'Conducted studies on cybersecurity, network security, and data privacy.',
-    'exp-siber':'Developed small-scale automation scripts using Python.',
-    'exp-ostim':'Developed control prototypes using Arduino.',
-    'sec-skills':'SKILLS','skills-title':'Tech Stack',
-    'sk-fe':'FRONT END','sk-be':'BACK END','sk-tools':'TOOLS','sk-lang':'LANGUAGES',
-    'sk-turkish':'Turkish — Native','sk-english':'English — B2',
-    'sec-proj':'PROJECTS','proj-title':'My Work',
-    'proj1-desc':'A Company Information Tracking Web Application with role management, admin panel, and multi user-company relationship system.',
-    'proj2-desc':'A Food Recipe and Recommendation Website with TR/EN multilingual support, TheMealDB and Google Translate API integration, and 250+ recipes.',
-    'proj-more':'[ click for details → ]',
-    'm1-overview':'A Company Information Tracking Web Application developed using ASP.NET Core. Built to manage complex multi-user and multi-company relationships with full role-based access control.',
-    'm1-met1':'COMPANIES TRACKED','m1-met2':'USERS MANAGED',
-    'm1-feat':'· User login & role management (Identity Framework)<br>· Multi user-company relationship management<br>· Admin panel for data oversight<br>· Responsive interface (HTML, CSS, Bootstrap, JS)<br>· Server integration for improved data security',
-    'm2-overview':'A Food Recipe and Recommendation Website with full bilingual (TR/EN) support, external API integration, and a rich user experience including recipe sharing, favorites, and category search.',
-    'm2-met1':'RECIPES AVAILABLE','m2-met2':'MULTILINGUAL',
-    'm2-feat':'· TR/EN multilingual structure<br>· TheMealDB API + Google Translate integration<br>· Recipe sharing, favorites, category search<br>· Admin panel for content management<br>· Identity Framework authentication<br>· Responsive Bootstrap interface',
-    'view-gh':'View on GitHub →',
-    'contact-title':'Get In Touch','cf-name-lbl':'YOUR_NAME','cf-email-lbl':'YOUR_EMAIL','cf-msg-lbl':'MESSAGE','cf-send':'[ SEND MESSAGE ]',
-    'cf-err':'// HATA: Tüm alanlar gerekli','cf-ok':'// Mail istemcisi açılıyor...'
-  },
-  tr:{
-    badge:'İŞE ALINMAYA HAZIR','hero-line1':"Merhaba! Ben",
-    'hero-sub':'Ankara\'da yaşayan Junior Full-Stack Developer. Kullanıcı dostu arayüzler ve yüksek performanslı API\'ler geliştiriyorum — frontend zarafetini backend sağlamlığıyla birleştiriyorum.',
-    'btn-contact':'// İLETİŞİME GEÇ','btn-about':'[ BEN KİMİM ]','btn-stack':'[ TEKNOLOJİLER ]','btn-projects':'[ PROJELER ]',
-    scroll:'KAYDIR',
-    'sec-about':'HAKKIMDA','about-title':'Ben Kimim?',
-    'about-p1':'<strong>Bilgisayar Mühendisliği mezunuyum</strong> (OSTİM Teknik Üniversitesi, Temmuz 2025). İyi çalışan yazılımlar geliştirme konusunda büyük bir tutku taşıyorum.',
-    'about-p2':'Odak noktam <strong>Full-Stack geliştirme</strong>: temiz React frontend\'leri ile güçlü ASP.NET Core backend\'lerini bir araya getiriyorum. Kod kalitesi, Git iş akışları ve güncel sektör trendleri konusunda hassasım.',
-    'about-p3':'<strong>Anlamlı katkılar</strong> sunmaya inanıyorum — sadece kod yazmak değil, ekip içi iş birliğiyle gerçek kullanıcıların gerçek sorunlarını çözmek.',
-    'info-loc':'KONUM','info-deg':'DERECE','info-deg-val':'B.Sc. Bilgisayar Mühendisliği',
-    'info-uni':'ÜNİVERSİTE','info-grad':'MEZUN','info-gpa':'GPA','info-role':'ROL','info-role-val':'Junior Full-Stack Developer',
-    'info-lang':'DİL','info-lang-val':'Türkçe (Anadil) · İngilizce (B2)',
-    'sec-exp':'DENEYİM','exp-title':'İş Deneyimi','exp-intern':'STAJYER MÜHENDİS',
-    'exp-netaflow':'ASP.NET Core ve C# kullanılarak iç bilgi yönetimi için bir web uygulaması geliştirildi. SQL Server ve Entity Framework Core ile veri modelleri oluşturuldu, kullanıcı/rol yönetimi implemente edildi.',
-    'exp-ion':'Siber güvenlik, ağ güvenliği ve veri gizliliği konularında çalışmalar yapıldı.',
-    'exp-siber':'Python kullanılarak küçük ölçekli otomasyon scriptleri geliştirildi.',
-    'exp-ostim':'Arduino ile kontrol prototipleri geliştirildi.',
-    'sec-skills':'BECERİLER','skills-title':'Teknoloji Yığını',
-    'sk-fe':'FRONT END','sk-be':'BACK END','sk-tools':'ARAÇLAR','sk-lang':'DİLLER',
-    'sk-turkish':'Türkçe — Anadil','sk-english':'İngilizce — B2',
-    'sec-proj':'PROJELER','proj-title':'Çalışmalarım',
-    'proj1-desc':'ASP.NET Core ile geliştirilen şirket bilgi takip uygulaması. Rol yönetimi, admin paneli ve çoklu kullanıcı-şirket ilişki yönetimi içerir.',
-    'proj2-desc':'TR/EN çok dilli destek, TheMealDB ve Google Translate API entegrasyonu ile 250+ tarif sunan yemek tarifi ve öneri web sitesi.',
-    'proj-more':'[ detaylar için tıkla → ]',
-    'm1-overview':'ASP.NET Core kullanılarak geliştirilmiş Şirket Bilgi Takip Web Uygulaması. Tam rol tabanlı erişim kontrolüyle karmaşık çok kullanıcılı ve çok şirketli ilişkileri yönetir.',
-    'm1-met1':'TAKİP EDİLEN ŞİRKET','m1-met2':'YÖNETİLEN KULLANICI',
-    'm1-feat':'· Kullanıcı girişi ve rol yönetimi (Identity Framework)<br>· Çoklu kullanıcı-şirket ilişki yönetimi<br>· Veri gözetimi için admin paneli<br>· Duyarlı arayüz (HTML, CSS, Bootstrap, JS)<br>· Sunucu entegrasyonu ile geliştirilmiş veri güvenliği',
-    'm2-overview':'Tam çift dilli (TR/EN) destek, harici API entegrasyonu ve tarif paylaşma, favoriler ve kategori arama gibi zengin kullanıcı deneyimi sunan Yemek Tarifi ve Öneri Web Sitesi.',
-    'm2-met1':'MEVCUT TARİF','m2-met2':'ÇOK DİLLİ',
-    'm2-feat':'· TR/EN çok dilli yapı<br>· TheMealDB API + Google Translate entegrasyonu<br>· Tarif paylaşma, favoriler, kategori arama<br>· İçerik yönetimi için admin paneli<br>· Identity Framework kimlik doğrulaması<br>· Duyarlı Bootstrap arayüzü',
-    'view-gh':'GitHub\'da Görüntüle →',
-    'contact-title':'İletişime Geç','cf-name-lbl':'ADINIZ','cf-email-lbl':'E-POSTA','cf-msg-lbl':'MESAJ','cf-send':'[ MESAJ GÖNDER ]',
-    'cf-err':'// ERROR: all fields required','cf-ok':'// Opening your mail client...'
-  }
-};
-let lang='en';
-function applyLang(l){
-  lang=l;
-  const d=i18n[l];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const k=el.getAttribute('data-i18n');
-    if(d[k]!==undefined)el.innerHTML=d[k];
-  });
-  document.getElementById('langBtn').textContent=l==='en'?'TR':'EN';
-  document.documentElement.lang=l==='en'?'en':'tr';
-}
-document.getElementById('langBtn').addEventListener('click',()=>applyLang(lang==='en'?'tr':'en'));
-
-// ── THEME ──
-const themeBtn=document.getElementById('themeBtn');
-let dark=true;
-themeBtn.addEventListener('click',()=>{
-  dark=!dark;
-  document.documentElement.setAttribute('data-theme',dark?'dark':'light');
-  themeBtn.textContent=dark?'☾':'☀';
-});
-
 // ── TYPED NAME ──
 const nameEl=document.getElementById('typedName');
 const fullName='Utku Ertaç';
@@ -547,7 +436,7 @@ function sendContact(){
   const msg=document.getElementById('cf-msg').value.trim();
   const status=document.getElementById('form-status');
   window.location.href=`mailto:utkuertac@gmail.com?subject=utkuertac.com Contact Form&body=${encodeURIComponent(msg)}`;
-  status.textContent=i18n[lang]['cf-ok'];
+  status.textContent='// Opening your mail client...';
   status.className='form-status ok';
   setTimeout(()=>{closeModal('contact');status.className='form-status';},2500);
 }
