@@ -226,7 +226,6 @@ footer a:hover{color:var(--accent)}
     <button class="nav-icon" id="themeBtn" title="Toggle theme" style="font-size:15px">☾</button>
     <!-- Lang -->
     <button class="nav-icon" id="langBtn" title="Dil / Language" style="font-size:11px;letter-spacing:.04em;font-family:var(--mono);width:auto;padding:0 .6rem;font-weight:700">EN</button>
-    <div class="nav-divider"></div>
   </div>
 </nav>
 
@@ -252,7 +251,7 @@ footer a:hover{color:var(--accent)}
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="favicon.png" alt="Utku Ertaç"/></div>
+      <div class="hero-photo"><img src="/img/favicon.png" alt="Utku Ertaç"/></div>
     </div>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div><span data-i18n="scroll">SCROLL</span></div>
@@ -261,8 +260,7 @@ footer a:hover{color:var(--accent)}
 <!-- ABOUT -->
 <section id="about">
 <div class="section-wrap fade-in">
-  <div class="sec-label" data-i18n="sec-about">ABOUT_ME</div>
-  <h2 class="sec-title" data-i18n="about-title">ABOUT_ME</h2>
+  <div class="sec-label" data-i18n="sec-about">ABOUT-ME</div>
   <div class="about-grid">
     <div class="about-text">
       <p data-i18n="about-p1">I'm a <strong>Computer Engineering graduate</strong> (OSTİM Technical University, July 2025), passionate about building software that works — and works well.</p>
@@ -288,14 +286,13 @@ footer a:hover{color:var(--accent)}
 <section id="skills">
 <div class="section-wrap fade-in">
   <div class="sec-label" data-i18n="sec-skills">SKILLS</div>
-  <h2 class="sec-title" data-i18n="skills-title">SKILLS</h2>
   <div class="skills-grid">
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-fe">FRONT END</div>
+      <div class="skill-cat" data-i18n="sk-fe">FRONT-END</div>
       <div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">React</span></div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat" data-i18n="sk-be">BACK END</div>
+      <div class="skill-cat" data-i18n="sk-be">BACK-END</div>
       <div class="skill-tags"><span class="skill-tag">C#</span><span class="skill-tag">ASP.NET Core</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">EF Core</span><span class="skill-tag">Identity Framework</span></div>
     </div>
     <div class="skill-card">
@@ -314,7 +311,6 @@ footer a:hover{color:var(--accent)}
 <section id="projects">
 <div class="section-wrap fade-in">
   <div class="sec-label" data-i18n="sec-proj">PROJECTS</div>
-  <h2 class="sec-title" data-i18n="proj-title">PROJECTS</h2>
   <div class="projects-grid">
     <div class="proj-card" onclick="openProject('company')">
       <div class="proj-name"><span>$</span> company-info-tracker</div>
@@ -549,7 +545,7 @@ document.getElementById('heroContactBtn').addEventListener('click',()=>openModal
 function sendContact(){
   const msg=document.getElementById('cf-msg').value.trim();
   const status=document.getElementById('form-status');
-  window.location.href=`mailto:utkuertac@gmail.com subject=utkuertac.com Contact Form &body=${encodeURIComponent(msg)}`;
+  window.location.href=`mailto:utkuertac@gmail.com?subject=utkuertac.com Contact Form&body=${encodeURIComponent(msg)}`;
   status.textContent=i18n[lang]['cf-ok'];
   status.className='form-status ok';
   setTimeout(()=>{closeModal('contact');status.className='form-status';},2500);
