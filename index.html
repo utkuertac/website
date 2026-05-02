@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Utku Ertaç — Full-Stack Developer</title>
-<link rel="icon" type="image/png" href="favicon.png"/>
+<title>Utku Ertaç</title>
+<link rel="icon" type="image/png" href="/img/favicon.png"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -197,18 +197,10 @@ footer a:hover{color:var(--accent)}
 
 <nav>
   <a href="#hero" class="nav-brand">
-    <div class="nav-logo"><img src="favicon.png" alt="Logo"/></div>
+    <div class="nav-logo"><img src="/img/favicon.png" alt="Logo"/></div>
     <span class="nav-name">UTKU ERTAÇ</span>
   </a>
   <div class="nav-right">
-    <!-- Theme -->
-    <button class="nav-icon" id="themeBtn" title="Toggle theme" style="font-size:15px">☾</button>
-    <!-- Lang -->
-    <button class="nav-icon" id="langBtn" title="Dil / Language" style="font-size:11px;letter-spacing:.04em;font-family:var(--mono);width:auto;padding:0 .6rem;font-weight:700">EN</button>
-    <div class="nav-divider"></div>
-    <!-- CV -->
-    <a class="nav-btn cv-visible" href="utku-ertac-cv.pdf" download>[ CV ]</a>
-    <div class="nav-divider"></div>
     <!-- Instagram -->
     <a class="nav-icon" href="https://www.instagram.com/utkuertac" target="_blank" rel="noopener" title="Instagram">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -229,6 +221,12 @@ footer a:hover{color:var(--accent)}
     <a class="nav-icon" href="mailto:utkuertac@gmail.com" title="Email">
       <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
     </a>
+    <div class="nav-divider"></div>
+    <!-- Theme -->
+    <button class="nav-icon" id="themeBtn" title="Toggle theme" style="font-size:15px">☾</button>
+    <!-- Lang -->
+    <button class="nav-icon" id="langBtn" title="Dil / Language" style="font-size:11px;letter-spacing:.04em;font-family:var(--mono);width:auto;padding:0 .6rem;font-weight:700">EN</button>
+    <div class="nav-divider"></div>
   </div>
 </nav>
 
@@ -242,18 +240,14 @@ footer a:hover{color:var(--accent)}
     <div class="hero-left">
       <div class="hero-badge" data-i18n="badge">AVAILABLE FOR HIRE</div>
       <h1 class="hero-title">
-        <span class="line1" data-i18n="hero-line1">Hi, I'm</span>
+        <span class="line1" data-i18n="hero-line1">Hi! I'm</span>
         <span class="name" id="typedName"><span class="cursor-blink"></span></span>
       </h1>
       <p class="hero-sub" data-i18n="hero-sub">Junior Full-Stack Developer based in Ankara, Turkey. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.</p>
-      <div class="hero-tags">
-        <span class="tag accent">JavaScript</span><span class="tag accent">React</span><span class="tag accent">ASP.NET Core</span>
-        <span class="tag">C#</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Bootstrap</span>
-      </div>
       <div class="hero-btns">
         <button class="btn-primary" id="heroContactBtn" data-i18n="btn-contact">// CONTACT ME</button>
-        <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" data-i18n="btn-about">[ WHO AM I ]</button>
-        <button class="btn-outline" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})" data-i18n="btn-stack">[ TECH STACK ]</button>
+        <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" data-i18n="btn-about">[ ABOUT-ME ]</button>
+        <button class="btn-outline" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})" data-i18n="btn-stack">[ SKILLS ]</button>
         <button class="btn-outline" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" data-i18n="btn-projects">[ PROJECTS ]</button>
       </div>
     </div>
@@ -290,53 +284,11 @@ footer a:hover{color:var(--accent)}
 </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-<div class="section-wrap fade-in">
-  <div class="sec-label" data-i18n="sec-exp">EXPERIENCE</div>
-  <h2 class="sec-title" data-i18n="exp-title">Work Experience</h2>
-  <div class="exp-list">
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-company">NetaFlow<span>, Ankara</span></div>
-        <div class="exp-date">02/2025 – 05/2025</div>
-      </div>
-      <div class="exp-role" data-i18n="exp-intern">INTERN ENGINEER</div>
-      <div class="exp-desc" data-i18n="exp-netaflow">Developed a web application for internal information management using ASP.NET Core and C#. Created data models using SQL Server and Entity Framework Core, and implemented user/role management.</div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-company">ION<span>, İstanbul</span></div>
-        <div class="exp-date">06/2023 – 07/2023</div>
-      </div>
-      <div class="exp-role" data-i18n="exp-intern">INTERN ENGINEER</div>
-      <div class="exp-desc" data-i18n="exp-ion">Conducted studies on cybersecurity, network security, and data privacy.</div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-company">Siber Koza<span>, İstanbul</span></div>
-        <div class="exp-date">01/2023 – 02/2023</div>
-      </div>
-      <div class="exp-role" data-i18n="exp-intern">INTERN ENGINEER</div>
-      <div class="exp-desc" data-i18n="exp-siber">Developed small-scale automation scripts using Python.</div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-company">OSTİM Technical University<span>, Ankara</span></div>
-        <div class="exp-date">06/2022 – 07/2022</div>
-      </div>
-      <div class="exp-role" data-i18n="exp-intern">INTERN ENGINEER</div>
-      <div class="exp-desc" data-i18n="exp-ostim">Developed control prototypes using Arduino.</div>
-    </div>
-  </div>
-</div>
-</section>
-
 <!-- SKILLS -->
 <section id="skills">
 <div class="section-wrap fade-in">
   <div class="sec-label" data-i18n="sec-skills">SKILLS</div>
-  <h2 class="sec-title" data-i18n="skills-title">Tech Stack</h2>
+  <h2 class="sec-title" data-i18n="skills-title">SKILLS</h2>
   <div class="skills-grid">
     <div class="skill-card">
       <div class="skill-cat" data-i18n="sk-fe">FRONT END</div>
@@ -597,7 +549,6 @@ document.getElementById('heroContactBtn').addEventListener('click',()=>openModal
 function sendContact(){
   const msg=document.getElementById('cf-msg').value.trim();
   const status=document.getElementById('form-status');
-  if(!name||!email||!msg){status.textContent=i18n[lang]['cf-err'];status.className='form-status err';return;}
   window.location.href=`mailto:utkuertac@gmail.com subject=utkuertac.com Contact Form &body=${encodeURIComponent(msg)}`;
   status.textContent=i18n[lang]['cf-ok'];
   status.className='form-status ok';
