@@ -10,11 +10,11 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#0a0c0f;--bg2:#0f1117;--bg3:#161b24;
-  --surface:#1a2030;--surface2:#1e2535;
+  --surface:#1a2030;
   --border:#1e3a2f;--border2:#2a4d3e;
-  --accent:#00ff88;--accent2:#00cc6a;--accent3:#00ffa8;
+  --accent:#00ff88;--accent3:#00ffa8;
   --text:#e2f0e8;--text2:#8fa89a;--text3:#556b62;
-  --red:#ff4444;--blue:#4488ff;--yellow:#ffdd44;
+  --red:#ff4444;
   --mono:'Share Tech Mono',monospace;
   --radius:6px;--radius2:12px;--nav-h:64px;
 }
@@ -47,11 +47,7 @@ main{padding-top:var(--nav-h)}
 #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:2rem;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px, transparent 1px),linear-gradient(90deg, var(--border) 1px, transparent 1px);background-size:48px 48px;opacity:.35;}
 .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(0,255,136,.12) 0%, transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
-.hero-inner{position:relative;z-index:1;max-width:860px;width:100%;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
-.hero-left{}
-.hero-photo-wrap{flex-shrink:0}
-.hero-photo{width:180px;height:180px;border:2px solid var(--border2);border-radius:var(--radius2);overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--surface);}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-inner{position:relative;z-index:1;max-width:860px;width:100%;}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border2);border-radius:2rem;padding:.3rem .9rem;font-size:.76rem;color:var(--accent);margin-bottom:1.5rem;letter-spacing:.1em;}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
@@ -60,9 +56,6 @@ main{padding-top:var(--nav-h)}
 .hero-title .name{display:block;color:var(--accent)}
 .cursor-blink{display:inline-block;width:3px;height:.85em;background:var(--accent);margin-left:4px;vertical-align:middle;animation:blink .8s step-end infinite;}
 .hero-sub{font-size:.9rem;color:var(--text2);max-width:520px;line-height:1.85;margin-bottom:2rem;}
-.hero-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
-.tag{padding:.25rem .7rem;border:1px solid var(--border2);border-radius:var(--radius);font-size:.74rem;color:var(--text2);letter-spacing:.06em;}
-.tag.accent{border-color:var(--accent);color:var(--accent)}
 .hero-btns{display:flex;gap:.6rem;flex-wrap:wrap}
 .btn-primary{padding:.65rem 1.3rem;background:var(--accent);color:#000;font-family:var(--mono);font-size:.82rem;border:none;border-radius:var(--radius);cursor:pointer;letter-spacing:.08em;font-weight:700;transition:all .2s;white-space:nowrap;}
 .btn-primary:hover{background:var(--accent3);transform:translateY(-1px)}
@@ -95,7 +88,7 @@ main{padding-top:var(--nav-h)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .skill-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius2);padding:1.25rem;transition:border-color .2s;}
 .skill-card:hover{border-color:var(--border2)}
-.skill-cat{font-size:1.1rem;color:var(--accent);letter-spacing:.2em;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
+.skill-cat{font-size:.9rem;color:var(--accent);letter-spacing:.2em;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
 .skill-cat::before{content:'>';color:var(--text3)}
 .skill-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .skill-tag{padding:.2rem .6rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.72rem;color:var(--text);letter-spacing:.04em;}
@@ -111,9 +104,7 @@ main{padding-top:var(--nav-h)}
 .proj-name span{color:var(--accent)}
 .proj-desc{font-size:.82rem;color:var(--text2);line-height:1.75;margin-bottom:1rem}
 .proj-tech-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
-.proj-tech{padding:.15rem .5rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.69rem;color:var(--text3);}
-.proj-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--accent);letter-spacing:.06em;}
-.proj-more{font-size:.73rem;color:var(--text3);letter-spacing:.1em;margin-top:.5rem;display:block;}
+.proj-tech{padding:.15rem .5rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.69rem;color:var(--text);}
 
 /* MODAL */
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .25s;}
@@ -158,8 +149,7 @@ footer a:hover{color:var(--accent)}
 /* RESPONSIVE */
 @media(max-width:768px){
   nav{padding:0 1rem}
-  .hero-inner{grid-template-columns:1fr;text-align:left}
-  .hero-photo-wrap{display:none}
+  .hero-inner{text-align:left}
   .about-grid{grid-template-columns:1fr}
   .section-wrap{padding:3.5rem 1.25rem}
   .nav-divider{display:none}
@@ -167,7 +157,6 @@ footer a:hover{color:var(--accent)}
 @media(max-width:560px){
   .hero-btns{flex-direction:column;align-items:flex-start}
   .nav-right .nav-btn{display:none}
-  .nav-right .nav-btn.cv-visible{display:inline-flex}
 }
 </style>
 </head>
@@ -221,9 +210,6 @@ footer a:hover{color:var(--accent)}
         <button class="btn-outline" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">[ skills ]</button>
         <button class="btn-outline" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">[ projects ]</button>
       </div>
-    </div>
-    <div class="hero-photo-wrap">
-      <div class="hero-photo"><img src="/img/favicon.png" alt="Utku Ertaç"/></div>
     </div>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div><span>SCROLL</span></div>
@@ -288,21 +274,11 @@ footer a:hover{color:var(--accent)}
       <div class="proj-name"><span>$</span> company-info-tracker</div>
       <div class="proj-desc">A Company Information Tracking Web Application with role management, admin panel, and multi user-company relationship system.</div>
       <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">SQL Server</span><span class="proj-tech">Identity</span><span class="proj-tech">Bootstrap</span></div>
-      <div class="proj-link">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        github.com/utkuertac/company-info-tracker
-      </div>
-      <span class="proj-more">[ >> click for details ]</span>
     </div>
     <div class="proj-card" onclick="openProject('food')">
       <div class="proj-name"><span>$</span> food-recipe-website</div>
       <div class="proj-desc">A Food Recipe and Recommendation Website with TR/EN multilingual support, TheMealDB and Google Translate API integration, and 250+ recipes.</div>
       <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">TheMealDB API</span><span class="proj-tech">Google Translate</span><span class="proj-tech">Identity</span></div>
-      <div class="proj-link">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        github.com/utkuertac/food-recipe-website
-      </div>
-      <span class="proj-more">[ >> click for details ]</span>
     </div>
   </div>
 </div>
