@@ -105,6 +105,8 @@ main{padding-top:var(--nav-h)}
 .proj-desc{font-size:.82rem;color:var(--text2);line-height:1.75;margin-bottom:1rem}
 .proj-tech-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
 .proj-tech{padding:.15rem .5rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:.69rem;color:var(--text);}
+.proj-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--accent);letter-spacing:.06em;}
+.proj-more{font-size:.73rem;color:var(--text3);letter-spacing:.1em;margin-top:.5rem;display:block;}
 
 /* MODAL */
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .25s;}
@@ -203,7 +205,7 @@ footer a:hover{color:var(--accent)}
         <span class="line1">Hi! I'm</span>
         <span class="name" id="typedName"><span class="cursor-blink"></span></span>
       </h1>
-      <p class="hero-sub">Junior Full-Stack Developer based in Ankara, Turkey. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.</p>
+      <p class="hero-sub">I'm a Junior Full-Stack Developer. I build user-friendly interfaces and high-performance APIs — bridging frontend elegance with backend reliability.</p>
       <div class="hero-btns">
         <button class="btn-primary" id="heroContactBtn">// contact-me</button>
         <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">[ about-me ]</button>
@@ -221,17 +223,14 @@ footer a:hover{color:var(--accent)}
   <div class="sec-label">about-me</div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm a <strong>Computer Engineering graduate</strong> (OSTİM Technical University, July 2025), passionate about building software that works — and works well.</p>
-      <p>My focus is <strong>Full-Stack development</strong>, combining clean React frontends with robust ASP.NET Core backends. I care deeply about code quality, Git workflows, and staying current with industry trends.</p>
-      <p>I believe in <strong>meaningful contributions</strong> — not just writing code, but solving real problems for real users through collaborative, innovative projects.</p>
+      <p>I aim to pursue my career in software development as a <strong>Junior Full-Stack Developer</strong>. Throughout my education and projects, I have gained experience in developing user-friendly interfaces on the <strong>Front-End</strong> using <strong>JavaScript</strong>, <strong>Bootstrap</strong>, and <strong>React</strong>, while on the <strong>Back-End</strong> I focus on building APIs and database structures using <strong>C#</strong>, <strong>ASP.NET Core</strong>, <strong>Python</strong>, and <strong>SQL</strong> to improve application performance. With my interest in coding standards, Git usage, and industry trends, I aim to strengthen team collaboration and add value to software development processes. By combining my technical knowledge and problem-solving skills with my enthusiasm for software development, I aspire to take part in innovative projects, continuously improve myself, and make meaningful contributions.</p>
     </div>
     <div>
       <ul class="info-list">
         <li><span class="info-key">email</span><span class="info-val"><a href="mailto:utkuertac@gmail.com">utkuertac@gmail.com</a></span></li>
         <li><span class="info-key">role</span><span class="info-val">Junior Full-Stack Developer</span></li>
-        <li><span class="info-key">degree</span><span class="info-val">B.Sc. Computer Engineering</span></li>
-        <li><span class="info-key">university</span><span class="info-val">OSTİM Technical University</span></li>
-        <li><span class="info-key">graduation</span><span class="info-val">July 2025</span></li>
+        <li><span class="info-key">degree</span><span class="info-val">BSc in Computer Engineering</span></li>
+        <li><span class="info-key">university</span><span class="info-val">OSTİM Technical University [2020-2025]</span></li>
         <li><span class="info-key">location</span><span class="info-val">Ankara, Türkiye</span></li>        
         <li><span class="info-key">languages</span><span class="info-val">Turkish [Native] · English [B2]</span></li>
       </ul>
@@ -273,12 +272,22 @@ footer a:hover{color:var(--accent)}
     <div class="proj-card" onclick="openProject('company')">
       <div class="proj-name"><span>$</span> company-info-tracker</div>
       <div class="proj-desc">A Company Information Tracking Web Application with role management, admin panel, and multi user-company relationship system.</div>
-      <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">SQL Server</span><span class="proj-tech">Identity</span><span class="proj-tech">Bootstrap</span></div>
+      <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">Identity Framework</span><span class="proj-tech">SQL</span></div>
+      <div class="proj-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        github.com/utkuertac/company-info-tracker
+      </div>
+      <span class="proj-more">[ >> click for details ]</span>
     </div>
     <div class="proj-card" onclick="openProject('food')">
       <div class="proj-name"><span>$</span> food-recipe-website</div>
       <div class="proj-desc">A Food Recipe and Recommendation Website with TR/EN multilingual support, TheMealDB and Google Translate API integration, and 250+ recipes.</div>
-      <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">TheMealDB API</span><span class="proj-tech">Google Translate</span><span class="proj-tech">Identity</span></div>
+      <div class="proj-tech-row"><span class="proj-tech">ASP.NET Core</span><span class="proj-tech">EF Core</span><span class="proj-tech">Identity Framework</span><span class="proj-tech">TheMealDB API</span><span class="proj-tech">Google Translate API</span><span class="proj-tech">SQL</span></div>
+      <div class="proj-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        github.com/utkuertac/food-recipe-website
+      </div>
+      <span class="proj-more">[ >> click for details ]</span>
     </div>
   </div>
 </div>
@@ -298,19 +307,19 @@ footer a:hover{color:var(--accent)}
       <button class="modal-close" onclick="closeModal('company')">✕</button>
     </div>
     <div class="modal-section"><div class="modal-label">// overview</div>
-      <div class="modal-body">A Company Information Tracking Web Application was developed using ASP.NET Core. EF Core and SQL Server were used. User login and role management were added with Identity Framework. Multi user-company relationship management and an admin panel were implemented. A responsive interface was built using HTML, CSS, Bootstrap, and JavaScript. This project enabled tracking of 25+ companies and managing 10+ users, accelerating data tracking processes and improving data security and accessibility through server integration.</div>
+      <div class="modal-body">A Company Information Tracking Web Application was developed using ASP.NET Core. EF Core and SQL Server were used. User login and role management were added with Identity Framework. Multi user-company relationship management and an admin panel were implemented. A responsive interface was built using HTML, CSS, Bootstrap, and JavaScript. This project enabled tracking of 250+ companies and managing 25+ users, accelerating data tracking processes and improving data security and accessibility through server integration.</div>
     </div>
     <div class="modal-metrics">
-      <div class="metric-box"><div class="metric-val">25+</div><div class="metric-key">COMPANIES TRACKED</div></div>
-      <div class="metric-box"><div class="metric-val">10+</div><div class="metric-key">USERS MANAGED</div></div>
+      <div class="metric-box"><div class="metric-val">250+</div><div class="metric-key">COMPANIES TRACKED</div></div>
+      <div class="metric-box"><div class="metric-val">25+</div><div class="metric-key">USERS MANAGED</div></div>
     </div>
     <div class="modal-section"><div class="modal-label">// key-features</div>
       <div class="modal-body">
-        · User login & role management (Identity Framework)<br>
-        · Multi user-company relationship management<br>
-        · Admin panel for centralized data oversight<br>
-        · Responsive interface (HTML, CSS, Bootstrap, JS)<br>
-        · Secure server integration for 25+ companies and 10+ users
+        >> User login & role management<br>
+        >> Multi user-company relationship management<br>
+        >> Secure server integration for 250+ companies and 25+ users<br>
+        >> Admin panel for centralized data oversight<br>
+        >> Responsive interface (HTML, CSS, Bootstrap, JS)
       </div>
     </div>
     <div class="modal-section">
@@ -318,9 +327,11 @@ footer a:hover{color:var(--accent)}
       <div class="modal-tech-row">
         <span class="proj-tech">ASP.NET Core</span>
         <span class="proj-tech">EF Core</span>
-        <span class="proj-tech">SQL Server</span>
         <span class="proj-tech">Identity Framework</span>
-        <span class="proj-tech">HTML/CSS</span>
+        <span class="proj-tech">SQL</span>
+        <span class="proj-tech">MS SQL Server</span>
+        <span class="proj-tech">HTML</span>
+        <span class="proj-tech">CSS</span>
         <span class="proj-tech">Bootstrap</span>
         <span class="proj-tech">JavaScript</span>
       </div>
@@ -348,27 +359,36 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="modal-section"><div class="modal-label">// key-features</div>
     <div class="modal-body">
-      · TR/EN multilingual structure<br>
-      · TheMealDB API + Google Translate integration for 250+ recipes<br>
-      · Recipe sharing, favorites, and category search<br>
-      · Admin panel for content management<br>
-      · Identity Framework authentication<br>
-      · Responsive interface (HTML, CSS, Bootstrap, JS)
+      >> Identity Framework authentication<br>
+      >> TheMealDB API + Google Translate integration for 250+ recipes<br>
+      >> TR/EN multilingual structure<br>
+      >> Recipe sharing, favorites, and category search<br>
+      >> Admin panel for content management<br>
+      >> Responsive interface (HTML, CSS, Bootstrap, JS)
     </div>
     </div>
     <div class="modal-section">
       <div class="modal-label">// tech-stack</div>
       <div class="modal-tech-row">
         <span class="proj-tech">ASP.NET Core</span>
-        <span class="proj-tech">Identity Framework</span>
         <span class="proj-tech">EF Core</span>
-        <span class="proj-tech">SQL Server</span>
-        <span class="proj-tech">JavaScript</span>
+        <span class="proj-tech">Identity Framework</span>
         <span class="proj-tech">TheMealDB API</span>
         <span class="proj-tech">Google Translate API</span>
+        <span class="proj-tech">SQL</span>
+        <span class="proj-tech">MS SQL Server</span>
+        <span class="proj-tech">Web Services API</span>
+        <span class="proj-tech">HTML</span>
+        <span class="proj-tech">CSS</span>
         <span class="proj-tech">Bootstrap</span>
+        <span class="proj-tech">JavaScript</span>
       </div>
     </div>
+    <div class="modal-section"><div class="modal-label">// other-contributors</div>
+    <div class="modal-body">
+        <p><span class="info-val"><a href="https://github.com/dilarasmnc" target="_blank" rel="noopener">>> Dilara Samancı</a></span></p>
+    </div>
+    </div>    
     <a class="modal-link" href="https://github.com/utkuertac/food-recipe-website" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
       <span>>> GitHub</span>
